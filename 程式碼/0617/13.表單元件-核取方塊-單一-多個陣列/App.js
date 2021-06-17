@@ -106,8 +106,9 @@ function App() {
           const value = e.target.value
 
           // 陣列沒有包含->加入
+          // 加return中斷以下的程式碼
           if (!likeList.includes(value))
-            setLikeList([...likeList, value])
+            return setLikeList([...likeList, value])
 
           // 陣列有包含->移出
           if (likeList.includes(value)) {
@@ -116,7 +117,6 @@ function App() {
             )
             setLikeList(newLikeList)
           }
-
         }}
         checked={likeList.includes('雞腿')}
       />
@@ -128,7 +128,7 @@ function App() {
         onChange={(e) => {
           const value = e.target.value
           if (!likeList.includes(value))
-            setLikeList([...likeList, value])
+            return setLikeList([...likeList, value])
 
           if (likeList.includes(value)) {
             const newLikeList = likeList.filter(
