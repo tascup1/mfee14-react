@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 function App() {
   const [total, setTotal] = useState(0)
 
-  // 指示目前目前元件進入更新狀態
+  // 指示目前元件是否開始進入更新狀態
   const [start, setStart] = useState(false)
 
   // componentDidMount
