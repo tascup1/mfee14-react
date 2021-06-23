@@ -36,7 +36,7 @@ npm install react-bootstrap
 打開專案中的 public 資料夾中的 index.html 檔案，將以下的程式碼加入到<title>標記的前一行即可：
 
 ```
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 ```
 
 註：上面這行樣式的程式碼，可到 [Bootstrap4官方網站](https://getbootstrap.com/docs/4.1/getting-started/introduction/) 找到。如果不想使用cdn的方式來引用，可以到官方網站下載已編譯過的css樣式檔案。
