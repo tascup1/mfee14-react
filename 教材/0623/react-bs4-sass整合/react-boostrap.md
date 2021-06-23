@@ -52,8 +52,8 @@ import {
   Button,
 } from 'react-bootstrap'
 
-const BootstrapTest = props => (
-  <>
+function BootstrapTest(props)  {
+  return <>
     <Container>
       <Row className="justify-content-md-center">
         <Col md="auto">
@@ -65,7 +65,7 @@ const BootstrapTest = props => (
       </Row>
     </Container>
   </>
-)
+}
 
 export default BootstrapTest
 ```
