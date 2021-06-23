@@ -6,6 +6,7 @@ import React, { useState } from 'react'
 import Home from './pages/Home'
 import About from './pages/About'
 import Login from './pages/Login'
+import ProductBaby from './pages/ProductBaby'
 
 // 組合用元件
 import MyNavbar from './components/MyNavbar'
@@ -22,19 +23,12 @@ function App() {
         <MyNavbar />
         {/* 主內容區 */}
         <MainContent>
-          <h2>用Link元件</h2>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/login">Login</Link>
-
-          <hr />
-          <h2>用a元件</h2>
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/login">Login</a>
-
           {/* 匹配路由表(路徑單一匹配) */}
           <Switch>
+            {/* 這裡要定義網址參數的屬性名稱 */}
+            <Route path="/product/baby/:id?">
+              <ProductBaby />
+            </Route>
             <Route path="/login">
               {/* 利用props傳入頁面元件狀態 */}
               <Login auth={auth} setAuth={setAuth} />

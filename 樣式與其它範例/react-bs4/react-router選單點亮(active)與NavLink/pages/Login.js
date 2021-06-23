@@ -1,4 +1,6 @@
 function Login(props) {
+  console.log(props)
+  
   const { auth, setAuth } = props
 
   return (

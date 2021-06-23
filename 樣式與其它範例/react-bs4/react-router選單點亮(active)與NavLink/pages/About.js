@@ -1,5 +1,10 @@
+import { withRouter } from 'react-router-dom'
+
 function About(props) {
+  console.log(props)
+
   const { auth } = props
+
   return (
     <>
       <h1>About</h1>
@@ -8,4 +13,4 @@ function About(props) {
   )
 }
 
-export default About
+export default withRouter(About)
