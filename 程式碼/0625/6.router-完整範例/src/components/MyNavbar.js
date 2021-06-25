@@ -1,12 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import {
-  Navbar,
-  Nav,
-  Form,
-  FormControl,
-  Button,
-  NavDropdown,
-} from 'react-bootstrap'
+import React from 'react'
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 
 // 要使用能有active css效果的NavLink元件
 import { NavLink } from 'react-router-dom'
@@ -23,7 +16,9 @@ function MyNavbar(props) {
         variant="dark"
         fixed="top"
       >
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home">
+          React-Bootstrap
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
@@ -46,18 +41,33 @@ function MyNavbar(props) {
             <Nav.Link as={NavLink} to="/student">
               學生資料
             </Nav.Link>
-            <NavDropdown title="產品" id="collasible-nav-dropdown">
-              <NavDropdown.Item as={NavLink} to="/product/men">
+            <NavDropdown
+              title="產品"
+              id="collasible-nav-dropdown"
+            >
+              <NavDropdown.Item
+                as={NavLink}
+                to="/product/men"
+              >
                 MEN
               </NavDropdown.Item>
-              <NavDropdown.Item as={NavLink} to="/product/women">
+              <NavDropdown.Item
+                as={NavLink}
+                to="/product/women"
+              >
                 WOMEN
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item as={NavLink} to="/product/kids">
+              <NavDropdown.Item
+                as={NavLink}
+                to="/product/kids"
+              >
                 KIDS
               </NavDropdown.Item>
-              <NavDropdown.Item as={NavLink} to="/product/baby">
+              <NavDropdown.Item
+                as={NavLink}
+                to="/product/baby"
+              >
                 BABY
               </NavDropdown.Item>
             </NavDropdown>

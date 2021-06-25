@@ -6,7 +6,9 @@ function ProductBaby(props) {
     <>
       <h1>ProductBaby</h1>
       {/* 可以由match物件中的params得到網址上定義的參數屬性名 */}
-      <h3>網址上參數(URL Params): {props.match.params.id}</h3>
+      <h3>
+        網址上參數(URL Params): {props.match.params.id}
+      </h3>
     </>
   )
 }
