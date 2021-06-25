@@ -2,6 +2,8 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { withRouter } from 'react-router-dom'
 
+import MultiLevelBreadcrumb from '../components/MultiLevelBreadcrumb'
+
 // 模擬從伺服器端來的產品資料
 import { data } from '../data'
 
@@ -48,6 +50,7 @@ function ProductDetailSearchParams(props) {
   return (
     <>
       <h1>ProductDetailSearchParams</h1>
+      <MultiLevelBreadcrumb />
       <p>目前產品的id值是：{searchParamsId}</p>
       <div>
         <div className="card" style={{ width: '18rem' }}>

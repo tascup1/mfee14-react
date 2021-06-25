@@ -13,11 +13,29 @@ function ProductList(props) {
     <>
       <h1>商品列表 - {props.title}</h1>
       <MultiLevelBreadcrumb />
+      <h3>使用params: id</h3>
       <ul>
         {data.map((product, i) => {
           return (
             <li key={i}>
               <Link to={'/product/detail/' + product.id}>
+                {product.name}/{product.price}
+              </Link>
+            </li>
+          )
+        })}
+      </ul>
+      <h3>使用搜尋字串`?id=XXX`</h3>
+      <ul>
+        {data.map((product, i) => {
+          return (
+            <li key={i}>
+              <Link
+                to={
+                  '/product/detail-searchparams?id=' +
+                  product.id
+                }
+              >
                 {product.name}/{product.price}
               </Link>
             </li>

@@ -7,9 +7,7 @@ import { pathnameList, pathnameTextList } from '../config/'
 function MultiLevelBreadcrumb(props) {
   const { location } = props
 
-  //console.log(location.pathname)
-
-  // find index
+  // find index，目前匹配的pathname，它的中文是什麼
   const findPathnameIndex = (pathname) => {
     // 找到剛好的，從前面開始找起
     const foundIndex = pathnameList.findIndex(
@@ -30,15 +28,6 @@ function MultiLevelBreadcrumb(props) {
     }
 
     return foundIndex
-
-    // // 截掉最後的id值(客製化屬性)
-    // if (pathname.includes(':')) {
-    //   // 商品詳細頁
-    //   const endIndex = pathname.indexOf(':')
-
-    //   newPathname = pathname.slice(0, endIndex)
-    //   console.log(newPathname)
-    // }
   }
 
   // 有一個項目和二個項目的情況
