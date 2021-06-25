@@ -1,5 +1,5 @@
 import React from 'react'
-import { withRouter, Link, Redirect } from 'react-router-dom'
+import { withRouter, Redirect } from 'react-router-dom'
 
 function Member(props) {
   const { auth } = props

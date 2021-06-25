@@ -1,6 +1,12 @@
 import React from 'react'
 
-import { Route, withRouter, NavLink, Switch, matchPath } from 'react-router-dom'
+import {
+  Route,
+  withRouter,
+  NavLink,
+  Switch,
+  matchPath,
+} from 'react-router-dom'
 import Product from './Product'
 
 function ProductCategory(props) {
@@ -15,7 +21,11 @@ function ProductCategory(props) {
     <>
       <h1>產品分類</h1>
       <nav className="nav nav-pills">
-        <NavLink activeClassName="active" className="nav-link" to={`${url}/pc`}>
+        <NavLink
+          activeClassName="active"
+          className="nav-link"
+          to={`${url}/pc`}
+        >
           PC
         </NavLink>
         <NavLink

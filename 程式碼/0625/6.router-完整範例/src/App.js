@@ -1,5 +1,9 @@
 // 使用套件
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from 'react-router-dom'
 import React, { useState } from 'react'
 
 // 頁面用元件
@@ -20,7 +24,7 @@ import MyFooter from './components/MyFooter'
 import MainContent from './components/MainContent'
 import ScrollToTop from './components/ScrollToTop'
 //import BreadCrumb from './components/BreadCrumb'
-import MultiLevelBreadCrumb from './components/MultiLevelBreadCrumb'
+import MultiLevelBreadcrumb from './components/MultiLevelBreadcrumb'
 
 function App() {
   const [auth, setAuth] = useState(false)
@@ -32,7 +36,7 @@ function App() {
         <MyNavbar auth={auth} />
         {/* 主內容區 */}
         <MainContent>
-          <MultiLevelBreadCrumb />
+          <MultiLevelBreadcrumb />
           {/* 匹配路由表(路徑單一匹配) */}
           {/* 切換顯示的元件畫面放在這下面 */}
           {/* ScrollToTop是為了讓連到另一頁內容時，頁面回到最上方 */}
