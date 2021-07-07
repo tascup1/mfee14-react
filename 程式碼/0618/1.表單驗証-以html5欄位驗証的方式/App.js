@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 function App() {
   // 養成習慣，先定義有哪些欄位屬性
   const [fields, setFields] = useState({
-    username: '',
-    email: '',
-    password: '',
-  })
+    username: "",
+    email: "",
+    password: "",
+  });
 
   // 處理每個欄位的變動
   const handleFieldChange = (e) => {
@@ -14,18 +14,16 @@ function App() {
     const updatedFields = {
       ...fields,
       [e.target.name]: e.target.value,
-    }
+    };
 
-    setFields(updatedFields)
-  }
+    setFields(updatedFields);
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    const data = new FormData(e.target);
 
-    const data = new FormData(e.target)
-
-    console.log(data.get('email'))
-    console.log(data.get('password'))
+    console.log(data.get("email"));
+    console.log(data.get("password"));
 
     // ex. 送出表單資料到伺服器
     // fetch('/api/form-submit-url', {
@@ -34,7 +32,7 @@ function App() {
     // })
 
     ///console.log('表單送出，輸入的欄位為', fields)
-  }
+  };
 
   return (
     <>
@@ -70,7 +68,7 @@ function App() {
         <button type="submit">提交</button>
       </form>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
